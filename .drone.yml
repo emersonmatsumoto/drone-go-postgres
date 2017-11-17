@@ -1,6 +1,6 @@
 workspace:
   base: /go
-  path: src/github.com/emersonmatsumoto/go-hello-world
+  path: src/github.com/emersonmatsumoto/drone-go-postgres
 
 pipeline:
   build:
@@ -13,4 +13,9 @@ pipeline:
       - go get -v
       - go test -v -cover
 
-
+  compose:
+    database:
+      image: postgres:9.4.5
+      environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_DB=todo
