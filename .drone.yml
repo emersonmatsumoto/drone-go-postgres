@@ -15,7 +15,7 @@ pipeline:
 
   compose:
     database:
-      image: postgres:9.4.5
+      image: postgres
       environment:
       - POSTGRES_USER=postgres
       - POSTGRES_DB=todo
