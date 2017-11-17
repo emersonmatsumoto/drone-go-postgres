@@ -13,9 +13,9 @@ pipeline:
       - go get -v
       - go test -v -cover
 
-  compose:
-    database:
-      image: postgres
-      environment:
-      - POSTGRES_USER=postgres
-      - POSTGRES_DB=todo
+services:
+  database:
+    image: postgres
+    environment:
+    - POSTGRES_USER=postgres
+    - POSTGRES_DB=todo
